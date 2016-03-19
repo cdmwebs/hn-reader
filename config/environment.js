@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'hn-reader',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://hacker-news.firebaseio.com/v0',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
