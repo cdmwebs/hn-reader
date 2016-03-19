@@ -1,9 +1,19 @@
 <div class="item__list">
-  {{#each model as |item|}}
+  {{#each stories as |item|}}
     {{#link-to 'items.item' item class="item"}}
-      {{item.title}}
-      {{item.score}}
-      {{item.kids.length}}
+      <div class="item__info">
+        <span class="item__title">{{item.title}}</span>
+        <span class="item__meta">
+          {{item.score}} points
+          {{#if item.domain}}
+            ({{item.domain}})
+          {{/if}}
+        </span>
+      </div>
+      <div class="item__comment_info">
+        <img src="/images/comment-bubble.png" class="comment__image">
+        {{item.descendants}}
+      </div>
     {{/link-to}}
   {{else}}
     <p>No items. Go outside?</p>

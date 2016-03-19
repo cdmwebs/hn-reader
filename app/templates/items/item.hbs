@@ -1,21 +1,27 @@
-<h1>{{model.title}}</h1>
-<dl>
-  <dt>Score</dt>
-  <dd>{{model.score}}</dd>
-  <dt>Kids</dt>
-  <dd>
-    {{#each model.kids as |item|}}
-      {{item}}
-    {{else}}
-      No kids.
-    {{/each}}
-  </dd>
-  <dt>Descendants</dt>
-  <dd>
-    {{#each model.descendants as |item|}}
-      {{item}}
-    {{else}}
-      No descendants.
-    {{/each}}
-  </dd>
-</dl>
+{{#if model.parent}}
+  Viewing a comment thread. Go back to
+  {{link-to 'parent' 'items.item' model.parent}}?
+{{else}}
+  <h1>{{model.title}}</h1>
+  <div class="item__meta">
+    {{model.score}} points by
+    <a href="https://news.ycombinator.com/user?id={{model.by}}">{{model.by}}</a>
+    <a href="https://news.ycombinator.com/item?id={{model.id}}">{{moment-from-now model.date}}</a> |
+    <a href="https://hn.algolia.com/?query={{model.title}}&sort=byDate&dateRange=all&type=story&storyText=false&prefix&page=0">past</a> |
+    <a href="https://www.google.com/search?q={{model.title}}">web</a> |
+    {{model.descendants}} comments |
+    <a href={{model.url}}>Link</a>
+  </div>
+{{/if}}
+
+<hr />
+
+{{{model.text}}}
+
+{{#each model.kids as |comment|}}
+  {{comment-sheet comment=comment}}
+{{else}}
+  No replies.
+{{/each}}
+
+

@@ -1,0 +1,57 @@
+.item {
+  height: 75px;
+  padding: 10px;
+  font-size: 80%;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+.item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.item.active {
+  background-color: #ddd;
+}
+
+.item__meta, .comment__meta {
+  color: #aaa;
+  margin-bottom: 0.5em;
+  font-size: 90%;
+}
+
+.item__list .item__info {
+  height: 100%;
+  width: 90%;
+  float: left;
+  position: relative;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.item__list .item__info .item__title {
+  display: block;
+  color: #333;
+}
+
+.item__list .item__info .item__meta {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
+.item__list .item__comment_info {
+  width: 10%;
+  float: left;
+  color: #aaa;
+  font-size: 100%;
+  text-align: center;
+}
+
+.item__list .item__comment_info .comment__image {
+  margin-top: 10px;
+  width: 100%;
+}
+
+

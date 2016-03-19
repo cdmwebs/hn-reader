@@ -1,0 +1,20 @@
+<div class="comment__meta">
+  <a href="https://news.ycombinator.com/user?id={{comment.by}}">{{comment.by}}</a>
+  {{#if comment.date}}
+    {{link-to (moment-from-now comment.date) 'items.item' comment}}
+  {{/if}}
+  {{#if isDead}}
+    <span class="is-dead">dead</span>
+  {{/if}}
+  {{#if isDeleted}}
+    <span class="is-deleted">deleted</span>
+  {{/if}}
+</div>
+
+<div class="comment__text">
+  {{{comment.text}}}
+</div>
+
+{{#each comment.kids as |reply|}}
+  {{comment-sheet comment=reply}}
+{{/each}}

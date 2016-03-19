@@ -1,0 +1,17 @@
+.comment {
+  margin-top: 2em;
+}
+
+.comment__meta {
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+
+.comment .comment {
+  margin-left: 2em;
+}
+
+.comment span.is-deleted, .comment span.is-dead {
+  color: red;
+}
