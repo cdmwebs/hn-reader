@@ -1,0 +1,14 @@
+<div class="item__list">
+  {{#each model as |item|}}
+    {{#link-to 'items.item' item class="item"}}
+      {{item.title}}
+      {{item.score}}
+      {{item.kids.length}}
+    {{/link-to}}
+  {{else}}
+    <p>No items. Go outside?</p>
+  {{/each}}
+</div>
+<div class="item__detail">
+  {{outlet}}
+</div>

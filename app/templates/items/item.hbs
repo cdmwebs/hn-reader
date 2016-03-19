@@ -1,0 +1,21 @@
+<h1>{{model.title}}</h1>
+<dl>
+  <dt>Score</dt>
+  <dd>{{model.score}}</dd>
+  <dt>Kids</dt>
+  <dd>
+    {{#each model.kids as |item|}}
+      {{item}}
+    {{else}}
+      No kids.
+    {{/each}}
+  </dd>
+  <dt>Descendants</dt>
+  <dd>
+    {{#each model.descendants as |item|}}
+      {{item}}
+    {{else}}
+      No descendants.
+    {{/each}}
+  </dd>
+</dl>
