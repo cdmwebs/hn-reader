@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 90%;
+}
+
+html, body, body > .ember-view {
+  height: 100%;
+}
+
+.item__list {
+  float: left;
+  width: 25%;
+  height: 100%;
+  overflow: scroll;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.item__detail {
+  float: left;
+  width: 75%;
+  height: 100%;
+  overflow: scroll;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.item {
+  height: 75px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: block;
+}
+
+.item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.item.active {
+  background-color: #ddd;
+}
