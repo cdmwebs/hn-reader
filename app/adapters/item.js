@@ -42,7 +42,7 @@ export default ApplicationAdapter.extend({
       var results = [];
 
       snapshot.forEach((childSnapshot) => {
-        if (results.length >= 50) { return; }
+        if (results.length >= 100) { return; }
         var payload = self._assignIdToPayload(childSnapshot);
         payload = { id: payload };
         self._updateRecordCacheForType(typeClass, payload);
