@@ -28,6 +28,13 @@ export default Ember.Route.extend(KeyboardShortcuts, {
   actions: {
     nextItem() {
       let currentItem = $('.ember-view .active');
+      if (currentItem.length === 0) {
+        // No story selected. Grab the first one.
+        let firstItem = $('.item__list .item').first();
+        let firstId = firstItem.attr('href').split('/')[2];
+        this.transitionTo('items.item', firstId);
+        return;
+      }
       if (currentItem.next().length === 0) { return; }
       let nextItem = currentItem.next().attr('href').split('/')[2];
       this.transitionTo('items.item', nextItem);
