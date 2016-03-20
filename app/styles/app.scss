@@ -6,12 +6,13 @@ $hover-color: #fcfcfc;
 @import 'components/loading-spinner';
 
 @import 'components/comments';
-@import 'components/items';
+@import 'components/item__list';
+@import 'components/item__detail';
 
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 80%;
+  font-size: 90%;
   color: $text-color;
   line-height: 1.7;
 }

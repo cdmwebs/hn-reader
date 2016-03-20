@@ -1,0 +1,21 @@
+.item__detail .item {
+  background-color: #f6f6ef;
+  padding: 10px;
+}
+
+.item__detail .comment__list {
+  padding: 10px;
+}
+
+.item__detail .item__title{
+  margin: 0 0 0.25em 0;
+  line-height: 1.5em;
+  font-size: 150%;
+}
+
+.item__detail .item__meta {
+  color: $quiet-text-color;
+  margin-bottom: 1em;
+  font-size: 90%;
+}
+

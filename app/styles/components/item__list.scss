@@ -1,17 +1,3 @@
-.item__detail .item {
-  background-color: #f6f6ef;
-  padding: 10px;
-}
-
-.item__detail .comment__list {
-  padding: 10px;
-}
-
-.item__detail .item__title{
-  margin: 0 0 0.5em 0;
-  line-height: 1.5em;
-}
-
 .item__list .item {
   height: 85px;
   padding: 10px;
@@ -28,10 +14,10 @@
   background-color: $hover-color;
 }
 
-.item__meta, .comment__meta {
+.item__list .item__meta {
   color: $quiet-text-color;
   margin-bottom: 0.5em;
-  font-size: 70%;
+  font-size: 90%;
 }
 
 .item__list .item__info {
@@ -68,5 +54,4 @@
   width: 100%;
   fill: $border-color;
 }
-
 

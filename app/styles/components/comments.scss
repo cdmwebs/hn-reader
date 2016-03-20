@@ -4,8 +4,10 @@
 
 .comment__meta {
   padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
   border-bottom: 1px solid $border-color;
+  color: $quiet-text-color;
+  margin-bottom: 0.5em;
+  font-size: 90%;
 }
 
 .comment .comment {
