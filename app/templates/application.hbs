@@ -1,4 +1,10 @@
 <div class="main__nav">
-  <h1 class="brand">Hacker News</h1>
+  <h1 class="brand">
+    {{link-to 'Hacker News' 'items'}}
+  </h1>
+  <span class="links">
+    {{link-to 'Items' 'items'}}
+    {{link-to 'About' 'about'}}
+  </span>
 </div>
 {{outlet}}

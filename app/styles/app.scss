@@ -36,6 +36,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .main__nav {
   height: 3em;
   background-color: $hn-orange;
@@ -46,6 +51,21 @@ a:hover {
   font-size: 140%;
   margin: 0;
   line-height: 2em;
+  color: $hn-white;
+  display: inline-block;
+}
+
+.main__nav h1 a {
+  color: $hn-white;
+}
+
+.main__nav .links {
+  float: right;
+  line-height: 3em;
+}
+
+.main__nav .links a {
+  margin-right: 0.75em;
   color: $hn-white;
 }
 
