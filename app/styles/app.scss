@@ -2,6 +2,9 @@ $border-color: #ccc;
 $text-color: #474a54;
 $quiet-text-color: #aaa;
 $hover-color: #fcfcfc;
+$hn-orange: #f60;
+$hn-white: #fff;
+$hn-gray: #f6f6ef;
 
 @import 'components/loading-spinner';
 
@@ -22,12 +25,12 @@ html, body, body > .ember-view {
 }
 
 a:link {
-  color: #ff6600;
+  color: $hn-orange;
 }
 
 .main__nav {
   height: 3em;
-  background-color: #f60;
+  background-color: $hn-orange;
   padding-left: 10px;
 }
 
@@ -35,7 +38,7 @@ a:link {
   font-size: 140%;
   margin: 0;
   line-height: 2em;
-  color: #fff;
+  color: $hn-white;
 }
 
 .item__list {

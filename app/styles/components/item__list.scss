@@ -6,12 +6,12 @@
 }
 
 .item__list .item:hover {
-  background-color: $hover-color;
+  background-color: $hn-gray;
   cursor: pointer;
 }
 
 .item__list .item.active {
-  background-color: $hover-color;
+  background-color: $hn-gray;
 }
 
 .item__list .item__meta {
