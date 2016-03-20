@@ -21,8 +21,8 @@ export default Ember.Component.extend({
 
   actions: {
     collapse() {
+      this.$(".comment__text").slideToggle();
       this.toggleProperty('isCollapsed');
-      this.$(".comment__text").slideToggle(500);
     }
   }
 });

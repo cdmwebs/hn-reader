@@ -2,10 +2,17 @@
   margin-top: 2em;
 }
 
-.comment__collapsor {
+.comment__collapsor, .comment__collapsor:hover {
   text-decoration: none;
-  font-size: 120%;
+}
+
+.comment__collapsor svg {
   margin-right: 0.5em;
+  max-width: 15px;
+}
+
+.comment__collapsor svg {
+  fill: $border-color;
 }
 
 .comment__meta {

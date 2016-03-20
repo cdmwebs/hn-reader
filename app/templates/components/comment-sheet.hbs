@@ -1,5 +1,11 @@
 <div class="comment__meta">
-  <a href="#" class="comment__collapsor" {{action 'collapse'}}>{{collapseAction}}</a>
+  <a href="#" class="comment__collapsor" {{action 'collapse'}}>
+    {{#if isCollapsed}}
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve"><g><path d="M51.781,39.34l8.879,8.879c2.26,2.262,3.141,2.201,5.34,0l13.34-13.34L90,45.559V10   H54.439l10.682,10.66L51.781,34C49.621,36.16,49.559,37.121,51.781,39.34z M48.219,60.66l-8.879-8.879   c-2.26-2.262-3.141-2.201-5.34,0l-13.34,13.34L10,54.441V90h35.559l-10.68-10.66L48.219,66   C50.379,63.84,50.439,62.879,48.219,60.66z"/></g></svg>
+    {{else}}
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve"><g><path d="M11.648,79.419l8.91,8.902c2.268,2.267,3.152,2.207,5.359,0l11.381-11.37L48,87.66V52   H12.309l10.719,10.691L11.648,74.064C9.481,76.23,9.419,77.194,11.648,79.419z M88.352,20.581l-8.91-8.902   c-2.268-2.269-3.152-2.207-5.359,0l-11.381,11.37L52,12.34V48h35.691L76.973,37.307l11.379-11.369   C90.52,23.771,90.578,22.806,88.352,20.581z"/></g></svg>
+    {{/if}}
+  </a>
   <a href="https://news.ycombinator.com/user?id={{comment.by}}">{{comment.by}}</a>
   {{#if comment.date}}
     {{link-to (moment-from-now comment.date) 'items.item' comment}}
