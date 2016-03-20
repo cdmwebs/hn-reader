@@ -13,15 +13,21 @@ $hn-gray: #f6f6ef;
 @import 'components/item__detail';
 
 body {
-  margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 90%;
   color: $text-color;
-  line-height: 1.7;
+  font-size: 0.9rem;
 }
 
-html, body, body > .ember-view {
+html, body, body > .ember-view,
+body > .ember-view > .container,
+body > .ember-view > .container > .row {
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.container > .row {
+  margin: 0;
 }
 
 a {
@@ -34,6 +40,20 @@ a:link {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
 }
 
 .main__nav {
@@ -50,21 +70,24 @@ a:hover {
 }
 
 .item__list {
-  float: left;
-  width: 25%;
+  font-size: 90%;
+  line-height: 1.5em;
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   border-right: 1px solid $border-color;
   box-sizing: border-box;
+  margin-right: 0;
+  margin-left: 0;
+  width: 22% !important;
 }
 
 .item__detail {
-  float: left;
-  width: 75%;
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
+  margin-right: 0;
+  margin-left: 0;
+  width: 78% !important;
 }
 
