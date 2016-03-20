@@ -1,9 +1,19 @@
 import ApplicationAdapter from 'hn-reader/adapters/application';
 
 export default ApplicationAdapter.extend({
-  pathForType() {
-    return 'item';
+  _getCollectionRef(typeClass, id) {
+    var ref = this._ref;
+    if (typeClass && id) {
+      ref = ref.child('item');
+    } else {
+      ref = ref.child('topstories');
+    }
+    if (id) {
+      ref = ref.child(id);
+    }
+    return ref;
   },
+
 
   findRecord(store, typeClass, id) {
     var ref = this._getCollectionRef(typeClass, id);
@@ -27,7 +37,6 @@ export default ApplicationAdapter.extend({
   findAll(store, typeClass) {
     var self = this;
     var ref = this._getCollectionRef(typeClass);
-    ref.path.pieces_[1] = 'topstories';
 
     return this._fetch(ref).then((snapshot) => {
       var results = [];
