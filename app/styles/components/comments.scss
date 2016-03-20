@@ -5,7 +5,7 @@
 .comment__meta {
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $border-color;
 }
 
 .comment .comment {
@@ -15,3 +15,4 @@
 .comment span.is-deleted, .comment span.is-dead {
   color: red;
 }
+

@@ -1,3 +1,8 @@
+$border-color: #ccc;
+$text-color: #474a54;
+$quiet-text-color: #aaa;
+$hover-color: #fcfcfc;
+
 @import 'components/loading-spinner';
 
 @import 'components/comments';
@@ -5,13 +10,31 @@
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  color: #474a54;
-  line-height: 1.5;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 80%;
+  color: $text-color;
+  line-height: 1.7;
 }
 
 html, body, body > .ember-view {
   height: 100%;
+}
+
+a:link {
+  color: #ff6600;
+}
+
+.main__nav {
+  height: 3em;
+  background-color: #f60;
+  padding-left: 10px;
+}
+
+.main__nav h1 {
+  font-size: 140%;
+  margin: 0;
+  line-height: 2em;
+  color: #fff;
 }
 
 .item__list {
@@ -20,7 +43,7 @@ html, body, body > .ember-view {
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid $border-color;
   box-sizing: border-box;
 }
 
@@ -30,7 +53,6 @@ html, body, body > .ember-view {
   height: 100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  padding: 10px;
   box-sizing: border-box;
 }
 

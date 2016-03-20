@@ -1,24 +1,32 @@
-.item {
-  height: 75px;
+.item__detail .item {
+  background-color: #f6f6ef;
   padding: 10px;
-  font-size: 80%;
-  border-bottom: 1px solid #ccc;
+}
+
+.item__detail .comment__list {
+  padding: 10px;
+}
+
+.item__list .item {
+  height: 85px;
+  padding: 10px;
+  border-bottom: 1px solid $border-color;
   display: block;
 }
 
-.item:hover {
-  background-color: #eee;
+.item__list .item:hover {
+  background-color: $hover-color;
   cursor: pointer;
 }
 
-.item.active {
-  background-color: #ddd;
+.item__list .item.active {
+  background-color: $hover-color;
 }
 
 .item__meta, .comment__meta {
-  color: #aaa;
+  color: $quiet-text-color;
   margin-bottom: 0.5em;
-  font-size: 90%;
+  font-size: 70%;
 }
 
 .item__list .item__info {
@@ -32,7 +40,7 @@
 
 .item__list .item__info .item__title {
   display: block;
-  color: #333;
+  color: $text-color;
 }
 
 .item__list .item__info .item__meta {
@@ -44,14 +52,16 @@
 .item__list .item__comment_info {
   width: 10%;
   float: left;
-  color: #aaa;
+  color: $quiet-text-color;
   font-size: 100%;
+  font-weight: bold;
   text-align: center;
 }
 
-.item__list .item__comment_info .comment__image {
+.item__list .comment__icon svg {
   margin-top: 10px;
   width: 100%;
+  fill: $border-color;
 }
 
 
