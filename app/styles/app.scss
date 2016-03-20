@@ -24,8 +24,16 @@ html, body, body > .ember-view {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:link {
   color: $hn-orange;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .main__nav {
