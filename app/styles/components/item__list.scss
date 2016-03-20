@@ -1,8 +1,9 @@
 .item__list .item {
   height: 85px;
-  padding: 10px;
+  padding: 5px 10px 5px 5px;
   border-bottom: 1px solid $border-color;
   display: block;
+  border-left: 5px solid transparent;
 }
 
 .item__list .item:hover {
@@ -12,6 +13,7 @@
 
 .item__list .item.active {
   background-color: $hn-gray;
+  border-left: 5px solid $hn-orange;
 }
 
 .item__list .item__meta {
