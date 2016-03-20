@@ -2,6 +2,12 @@
   margin-top: 2em;
 }
 
+.comment__collapsor {
+  text-decoration: none;
+  font-size: 120%;
+  margin-right: 0.5em;
+}
+
 .comment__meta {
   padding-bottom: 0.5em;
   border-bottom: 1px solid $border-color;
