@@ -1,9 +1,9 @@
 .changed {
-  animation: glow .5s 10 alternate;
+  animation: glow .5s 5 alternate;
 }
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 20px $hn-orange;
+    text-shadow: 0 0 15px $hn-orange;
   }
 }
