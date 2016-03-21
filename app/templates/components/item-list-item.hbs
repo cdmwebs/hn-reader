@@ -1,0 +1,17 @@
+{{#link-to 'items.item' item}}
+  <div class="item__info">
+    <span class="item__title">{{item.title}}</span>
+    <span class="item__meta">
+      <span class="item__score">{{item.score}}</span> points
+      {{#if item.domain}}
+        ({{item.domain}})
+      {{/if}}
+    </span>
+  </div>
+  <div class="item__comment_info">
+    <i class="comment__icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path clip-rule="evenodd" d="M50,10C25.145,10,5,18.865,5,42.5  c0,20.75,15.525,30.115,36.135,32.095C46.3,83.485,53.86,89.81,70,90c-2.975-4.545-3.475-10.67-1.955-16.875  C83.915,69.435,95,60.035,95,42.5C95,18.865,74.855,10,50,10 M85,42.5c0,7.05-1.99,16.88-19.22,20.885l-5.98,1.39l-1.465,5.965  c-0.55,2.24-0.9,4.455-1.045,6.615c-3.38-1.805-5.585-4.47-7.51-7.785l-2.58-4.44l-5.11-0.49C15,62.04,15,47.33,15,42.5  C15,27.57,26.775,20,50,20S85,27.57,85,42.5z"/></svg>
+    </i>
+    <span class="item__comment__count">{{item.descendants}}</span>
+  </div>
+{{/link-to}}

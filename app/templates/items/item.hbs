@@ -1,7 +1,7 @@
 <div class="item">
   {{#if model.parent}}
-    Viewing a comment thread. Go back to
-    {{link-to 'parent' 'items.item' model.parent}}?
+    <p><strong>You're viewing a comment thread. Go back to
+      {{link-to 'parent' 'items.item' model.parent}}?</strong></p>
   {{else}}
     <h1 class="item__title">{{model.title}}</h1>
     <div class="item__meta">
