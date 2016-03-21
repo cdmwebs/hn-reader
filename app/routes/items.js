@@ -27,7 +27,7 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 
   actions: {
     nextItem() {
-      let currentItem = $('.active.item');
+      let currentItem = $('.item .active').parent();
 
       if (currentItem.length === 0) {
         // No story selected. Grab the first one.
@@ -38,14 +38,14 @@ export default Ember.Route.extend(KeyboardShortcuts, {
       }
 
       if (currentItem.next().length === 0) { return; }
-      let nextItem = currentItem.next().attr('href').split('/')[2];
+      let nextItem = currentItem.next().children('a').attr('href').split('/')[2];
       this.transitionTo('items.item', nextItem);
     },
 
     previousItem() {
-      let currentItem = $('.active.item');
+      let currentItem = $('.item .active').parent();
       if (currentItem.prev().length === 0) { return; }
-      let previousItem = currentItem.prev().attr('href').split('/')[2];
+      let previousItem = currentItem.prev().children('a').attr('href').split('/')[2];
       this.transitionTo('items.item', previousItem);
     }
   }
